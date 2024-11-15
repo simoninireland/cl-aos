@@ -27,7 +27,9 @@
   :serial t
   :components ((:file "package")
 	       (:file "dense")
+	       (:file "schedules")
 	       (:file "operations")
+	       (:file "conditions")
 	       )
   :in-order-to ((test-op (test-op "cl-aos/test"))))
 
@@ -38,6 +40,6 @@
   :pathname "test/"
   :serial t
   :components ((:file "package")
-	       (:file "test-utils")
+	       (:file "test-dense-arrays")
 	       )
   :perform (test-op (o c) (uiop:symbol-call :fiveam '#:run-all-tests)))
